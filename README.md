@@ -215,7 +215,7 @@ Since $(ak^2 - m)$ is an integer, $a \mid c$ by definition. $\square$
 
 ## Chapter 8: Proofs Involving Sets
 
-### 1. Prove that $\{12n : n \in \mathbb{Z}\} \subseteq \{2n : n \in \mathbb{Z}\} \cap \{3n : n \in \mathbb{Z}\}$.
+### 1. Prove that $\{{12n : n \in \mathbb{Z}}\} \subseteq \{2n : n \in \mathbb{Z}\} \cap \{3n : n \in \mathbb{Z}\}$.
 **Proof.** Let $x \in \{12n : n \in \mathbb{Z}\}$. By definition, $x = 12k$ for some integer $k$.
 * Since $x = 2(6k)$ and $6k \in \mathbb{Z}$, $x \in \{2n : n \in \mathbb{Z}\}$.
 * Since $x = 3(4k)$ and $4k \in \mathbb{Z}$, $x \in \{3n : n \in \mathbb{Z}\}$.

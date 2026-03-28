@@ -132,13 +132,18 @@ Since $a$ and $b$ are integers, $3a + b$ is an integer. Let $k = 3a + b$. Then $
 
 ---
 
-### 15. If $b \in \mathbb{Z}$ and $b \leq k$ for every $k \in \mathbb{N}$, then $b \leq 0$.
-*(Note: I corrected the typo in your prompt from "b k" to "b $\leq$ k", which is the standard version of this problem in Hammack.)*
+### 15. If $b \in \mathbb{Z}$ and $b \nmid k$ for every $k \in \mathbb{N}$, then $b = 0$.
 
-**Proof.** Suppose $b \in \mathbb{Z}$ and $b \leq k$ for every $k \in \mathbb{N}$, but assume for contradiction that $b > 0$. Since $b$ is an integer and $b > 0$, then $b \geq 1$.
-However, the statement must hold for *every* $k \in \mathbb{N}$. If we choose $k = b - 1$ (which is a natural number if $b > 1$), or specifically if $b$ were 1, then $b - 1 = 0$ (not in $\mathbb{N}$), so let's use $k=1$. If $b=2$, then $b \leq 1$ is false. More formally: if $b > 0$, then $b \geq 1$. But the natural numbers include values smaller than $b$ (unless $b=1$, in which case $b \leq k$ holds). Wait—if $b=1$, $b \leq 1, 2, 3...$ is true. 
-*Correction:* The actual problem in Hammack 6.15 usually states: If $b \in \mathbb{Z}$ and $b < k$ for every $k \in \mathbb{N}$, then $b \leq 0$.
-**Proof of corrected version:** Suppose $b > 0$. Since $b$ is an integer, $b \geq 1$. But $k$ can be 1, because $1 \in \mathbb{N}$. Our condition says $b < k$ for all $k$. If we pick $k=1$, we get $b < 1$. This contradicts $b \geq 1$. Thus, $b \leq 0$. $\square$
+**Proof.** (By Contradiction) 
+Suppose $b \in \mathbb{Z}$ and $b \nmid k$ for every $k \in \mathbb{N}$, but assume for the sake of contradiction that $b \neq 0$.
+
+If $b \neq 0$, then either $b > 0$ or $b < 0$. We consider the absolute value $|b|$. Since $b$ is a non-zero integer, $|b|$ is a positive integer, so $|b| \in \mathbb{N}$.
+
+By the definition of divisibility, any non-zero integer $b$ divides itself ($b \cdot 1 = b$) and its negation ($b \cdot -1 = -b$). Therefore, $b$ must divide $|b|$. 
+
+Since $|b|$ is a natural number, this contradicts our initial statement that $b$ does not divide *any* $k \in \mathbb{N}$. 
+
+Thus, our assumption that $b \neq 0$ must be false. Therefore, $b = 0$. $\square$
 
 ---
 

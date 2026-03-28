@@ -386,9 +386,3 @@ Since both sides count the same thing, they are equal. $\square$
 * **Right side:** Choose the chair first ($n$ choices), then choose any subset of the remaining $n-1$ people to be on the committee ($2^{n-1}$ choices).
 * **Left side:** Choose a committee of size $k$ first ($\binom{n}{k}$), then choose one of those $k$ members to be chair. Sum over all possible sizes $k$. $\square$
 
----
-
-**YOU DID IT!** That is all 40 problems from your list. Your GitHub is going to look like a textbook.
-
-**Would you like me to quiz you with a "mixed" set of problems now to see if you can identify which proof technique (Induction, Contrapositive, Contradiction) to use on the fly?**
-

@@ -101,12 +101,18 @@ Since $a > 1$, $(2^a - 1) > 1$. Since $b > 1$, the second factor is also greater
 
 ## Chapter 6: Proof by Contradiction
 
-### 3. Prove that $3\sqrt{2}$ is irrational.
-**Proof.** Suppose for the sake of contradiction that $3\sqrt{2}$ is rational. Then there exist integers $a$ and $b$ (with $b \neq 0$) such that:
-$$3\sqrt{2} = \frac{a}{b}$$
-Dividing both sides by 3, we get:
-$$\sqrt{2} = \frac{a}{3b}$$
-Since $a$ and $3b$ are integers and $3b \neq 0$, this implies that $\sqrt{2}$ is rational. However, it is a known theorem that $\sqrt{2}$ is irrational. This is a contradiction. Therefore, $3\sqrt{2}$ must be irrational. $\square$
+### 3. Prove that $\sqrt[3]{2}$ is irrational.
+**Proof.** Suppose for the sake of contradiction that $\sqrt[3]{2}$ is rational. Then there exist integers $a$ and $b$ ($b \neq 0$) such that $\sqrt[3]{2} = \frac{a}{b}$. We assume this fraction is in simplest form, meaning $\gcd(a, b) = 1$. 
+
+Cubing both sides of the equation gives:
+$$2 = \frac{a^3}{b^3} \implies 2b^3 = a^3$$
+This implies that $a^3$ is even. By the properties of integers, if $a^3$ is even, then $a$ must also be even. Thus, $a = 2k$ for some integer $k$. Substituting this back into our equation:
+$$2b^3 = (2k)^3 \implies 2b^3 = 8k^3$$
+Dividing by 2, we get:
+$$b^3 = 4k^3 = 2(2k^3)$$
+This implies that $b^3$ is even, and therefore $b$ must be even. 
+
+If both $a$ and $b$ are even, they share a common factor of 2, which contradicts our assumption that $\gcd(a, b) = 1$. Therefore, $\sqrt[3]{2}$ must be irrational. $\square$
 
 ---
 

@@ -382,14 +382,6 @@ However, $6 \nmid 2$ and $6 \nmid 3$. Thus the statement is false. (This only ho
   $$= \frac{(k+1)(k+2)(2(k+1)+7)}{6}$$
   Matches the formula for $n=k+1$. $\square$
 
-That is a fantastic question. The short answer is: **The goal is always the same, but the "direction" you take depends on which side of the equation is easier to manipulate.**
-
-In formal proofs, you generally shouldn't "work backward" from the answer as your final presentation, because that can sometimes lead to logical fallacies (like accidentally assuming what you are trying to prove). However, as a scratch-pad strategy, working from both ends until they meet in the middle is a secret weapon for mathematicians.
-
-Here is how that looks using your Example #7.
-
----
-
 #### The Goal
 We want to prove that if the formula holds for $k$, it must hold for $k+1$.
 * **The Assumption ($P(k)$):** $1 \cdot 3 + 2 \cdot 4 + \dots + k(k+2) = \frac{k(k+1)(2k+7)}{6}$

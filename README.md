@@ -326,6 +326,38 @@ However, $6 \nmid 2$ and $6 \nmid 3$. Thus the statement is false. (This only ho
   $$25(24m + 1) - 1 = 25(24m) + 25 - 1 = 25(24m) + 24 = 24(25m + 1)$$
   Since $24$ is a factor, the statement holds for $k+1$. $\square$
 
+#### Inductive Step: Proving $24 \mid (5^{2n} - 1)$
+
+1.  **State the Inductive Hypothesis**
+    Assume the statement is true for $n = k$.
+    $5^{2k} - 1 = 24m$ (where $m$ is an integer)
+    $5^{2k} = 24m + 1$
+
+2.  **Set up the $n = k + 1$ Case**
+    We need to show $24$ divides $5^{2(k+1)} - 1$.
+    $5^{2(k+1)} - 1 = 5^{2k+2} - 1$
+
+3.  **Apply Exponent Rules**
+    Break the exponent apart to isolate the $5^{2k}$ term.
+    $5^{2k} \cdot 5^2 - 1 = 25(5^{2k}) - 1$
+
+4.  **Substitute the Hypothesis**
+    Replace $5^{2k}$ with $(24m + 1)$ from Step 1.
+    $25(24m + 1) - 1$
+
+5.  **Distribute and Simplify**
+    Multiply the terms and combine the constants.
+    $25(24m) + 25 - 1$
+    $25(24m) + 24$
+
+6.  **Factor out the Divisor**
+    Factor out $24$ to prove divisibility.
+    $24(25m + 1)$
+
+7.  **Conclusion**
+    Since $24(25m + 1)$ is a multiple of $24$, the statement holds for $n = k + 1$.
+
+    
 ---
 
 

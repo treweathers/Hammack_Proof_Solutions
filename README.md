@@ -406,11 +406,9 @@ $$= \frac{(n-1)!(n-k)}{(n-k)!} + \frac{k(n-1)!}{(n-k)!} = \frac{(n-1)! [n-k+k]}{
 **Proof.** $\binom{2n}{2} = \frac{2n(2n-1)}{2} = n(2n-1) = 2n^2 - n$.
 Right side: $2\frac{n(n-1)}{2} + n^2 = n^2 - n + n^2 = 2n^2 - n$. $\square$
 
-You've hit on the "shortcut" that makes combinations ($n$ choose $k$) much easier to handle than writing out full factorials every time.
-
+#### The "Descending" Shortcut
 In your factorial setup, $\binom{n}{k} = \frac{n!}{k!(n-k)!}$. But when $k$ is a small, specific number like **2**, most of that factorial cancels out.
 
-#### The "Descending" Shortcut
 Think of $\binom{n}{k}$ as: **Start at $n$, write $k$ descending factors, then divide by $k!$.**
 
 For **$\binom{n}{2}$**:

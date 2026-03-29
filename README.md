@@ -1,5 +1,10 @@
 # Hammack_Proof_Solutions
 
+### "Cram" Tips:
+* **Contradiction:** Use it when the statement says "There are no..." or "$\sqrt{x}$ is irrational."
+* **Contrapositive:** Use it when the "Then" part is simpler than the "If" part (like $x^2 \in \text{Even} \implies x \in \text{Even}$).
+* **Induction:** Use it for sums ($\sum$), factorials ($n!$), or $a^n - b^n$ divisibility.
+* **Direct:** Use it for straightforward definitions (Even/Odd/Divisibility).
 
 ## Chapter 4: Direct Proof
 

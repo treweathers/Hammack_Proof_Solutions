@@ -366,7 +366,7 @@ Left side: $\frac{n!}{2!(n-2)!} \cdot \frac{(n-2)!}{(k-2)!(n-k)!} = \frac{n!}{2!
 Right side: $\frac{n!}{k!(n-k)!} \cdot \frac{k!}{2!(k-2)!} = \frac{n!}{2!(k-2)!(n-k)!}$.
 Both sides simplify to the same expression. $\square$
 
-### Story for $\binom{n}{2}\binom{n-2}{k-2} = \binom{n}{k}\binom{k}{2}$
+#### Story for $\binom{n}{2}\binom{n-2}{k-2} = \binom{n}{k}\binom{k}{2}$
 
 **The Scenario:** You have a pool of $n$ athletes. You need to pick a **Team of $k$ players**, and from that team, you need to designate **2 Co-Captains**.
 

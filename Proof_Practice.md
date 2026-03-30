@@ -20,10 +20,6 @@
 8. For any integer $n \ge 0$, 
    $$\sum_{k=0}^{n} \binom{n}{k} = 2^n$$
 
-Since you have just a couple of hours, I’ve picked four problems that mirror the style and difficulty of the Hammack set you provided. These cover **Contradiction**, **Sets**, **Induction**, and a "bonus" **Parity/Divisibility** problem to keep your direct/contrapositive skills sharp.
-
-Copy these into GitHub or your scratchpad and try to solve them without looking at the solutions first!
-
 ---
 
 ### Practice Set: Final "Cram" Session

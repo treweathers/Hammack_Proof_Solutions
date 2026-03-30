@@ -19,3 +19,26 @@
 
 8. For any integer $n \ge 0$, 
    $$\sum_{k=0}^{n} \binom{n}{k} = 2^n$$
+
+Since you have just a couple of hours, I’ve picked four problems that mirror the style and difficulty of the Hammack set you provided. These cover **Contradiction**, **Sets**, **Induction**, and a "bonus" **Parity/Divisibility** problem to keep your direct/contrapositive skills sharp.
+
+Copy these into GitHub or your scratchpad and try to solve them without looking at the solutions first!
+
+---
+
+### Practice Set: Final "Cram" Session
+
+**Problem 1**
+Prove that there are no integers $x$ and $y$ such that $x^2 - 4y = 2$.
+
+**Problem 2**
+Suppose $A, B,$ and $C$ are sets. Prove that $A \times (B \cap C) = (A \times B) \cap (A \times C)$.
+
+**Problem 3**
+Prove that $n^2 < 2^n$ for all integers $n \geq 5$. 
+*(Tip: In the inductive step, you may need to use the fact that $2k + 1 < k^2$ for $k \geq 5$.)*
+
+**Problem 4**
+Suppose $n \in \mathbb{Z}$. If $n^2 - 6n + 5$ is even, then $n$ is odd. 
+
+---

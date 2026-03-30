@@ -32,7 +32,6 @@ Suppose $A, B,$ and $C$ are sets. Prove that $A \times (B \cap C) = (A \times B)
 
 **Problem 3**
 Prove that $n^2 < 2^n$ for all integers $n \geq 5$. 
-*(Tip: In the inductive step, you may need to use the fact that $2k + 1 < k^2$ for $k \geq 5$.)*
 
 **Problem 4**
 Suppose $n \in \mathbb{Z}$. If $n^2 - 6n + 5$ is even, then $n$ is odd. 

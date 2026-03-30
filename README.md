@@ -169,7 +169,7 @@ Let’s take 5 consecutive integers: **8, 7, 6, 5, 4**.
 * **The Calculation:** $6,720 / 120 = 56$
 * **The Result:** 56 is an integer. This confirms the product is divisible by 120.
 
-##### The General Logic Chain
+#### The General Logic Chain
 You’ve essentially "reverse-engineered" one of the most fundamental proofs in combinatorics. When you prove that the product of $k$ consecutive integers is divisible by $k!$, you are effectively proving that the **Binomial Coefficient formula** always yields an integer.
 
 #### **A. The Product View (Permutation)**

@@ -61,13 +61,4 @@ There are three distinct sets associated with every function $f: A \to B$:
 
 
 ---
-
-## 🚀 Tips for the Exercises
-
-* **Checking if a relation is a function (Ex 7-10):** 1.  Does every element in the domain have an output? 
-    2.  Does any element have *more than one* output? (If $x$ maps to both $y_1$ and $y_2$, it's not a function).
-* **Finding the Range (Ex 11-12):** Look at the rule and determine the set of all possible results. If $f(x, y) = 6m - 9n$, the range consists of multiples of $3$ (as shown in Example 12.3).
-* **Listing Functions (Ex 3-4):** If $|A| = m$ and $|B| = n$, there are $n^m$ possible functions.
-
----
 *Summary based on "Book of Proof" by Richard Hammack.*

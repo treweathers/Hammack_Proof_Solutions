@@ -20,4 +20,54 @@ When working on Transitivity for the Hammack problems, look for the "Middleman" 
 * In **Divisibility ($a|b$):** $y$ is usually eliminated by multiplying the two equations.
 * In **Parity/Summation:** $y$ is usually eliminated by adding or subtracting the equations (like we did above).
 
-**Does that "bridge" step make sense? It's basically an algebraic scavenger hunt to find $x$ and $z$ in the same room.**
+
+
+---
+
+# 📘 Summary: Hammack's Book of Proof – Chapter 12.1
+
+## 1. Formal Definition of a Function
+In advanced mathematics, a function is not just a "rule" or "formula"; it is a specific type of **set**.
+
+> **Definition 12.1:** A function $f$ from set $A$ to set $B$ (denoted $f: A \to B$) is a **relation** $f \subseteq A \times B$ such that for every $a \in A$, there is **exactly one** ordered pair $(a, b) \in f$.
+
+* **Notation:** We write $f(a) = b$ as an abbreviation for $(a, b) \in f$.
+* **Vertical Line Test:** In set terms, this means no two distinct pairs in the set $f$ can have the same first coordinate.
+
+
+
+## 2. Domain, Codomain, and Range
+There are three distinct sets associated with every function $f: A \to B$:
+
+| Term | Definition | Informal Meaning |
+| :--- | :--- | :--- |
+| **Domain** | The set $A$. | All possible "inputs." |
+| **Codomain** | The set $B$. | The "target" set or allowed types of output. |
+| **Range** | $\{f(a) : a \in A\}$ | The set of values that *actually* come out. |
+
+**Key Insight:** The **Range** is always a subset of the **Codomain** ($\text{Range} \subseteq B$), but they are not always equal. The codomain is often a matter of context (e.g., $f(n) = |n|$ could have a codomain of $\mathbb{N}$, $\mathbb{Z}$, or $\mathbb{R}$).
+
+## 3. Function Equality
+**Definition 12.3:** Two functions $f$ and $g$ are equal if:
+1.  They have the same **domain**.
+2.  $f(x) = g(x)$ for every $x$ in that domain.
+
+*Note:* Functions can be equal even if they are assigned different codomains, provided the sets of ordered pairs (the relations) are identical.
+
+## 4. Visualizing Functions
+* **Traditional Graphs:** Best for functions with numerical domains/codomains (e.g., $\mathbb{R} \to \mathbb{R}$).
+* **Arrow Diagrams:** Best for finite sets or abstract structures. An arrow points from $a \in A$ to $b \in B$ if $f(a) = b$.
+
+
+
+---
+
+## 🚀 Tips for the Exercises
+
+* **Checking if a relation is a function (Ex 7-10):** 1.  Does every element in the domain have an output? 
+    2.  Does any element have *more than one* output? (If $x$ maps to both $y_1$ and $y_2$, it's not a function).
+* **Finding the Range (Ex 11-12):** Look at the rule and determine the set of all possible results. If $f(x, y) = 6m - 9n$, the range consists of multiples of $3$ (as shown in Example 12.3).
+* **Listing Functions (Ex 3-4):** If $|A| = m$ and $|B| = n$, there are $n^m$ possible functions.
+
+---
+*Summary based on "Book of Proof" by Richard Hammack.*

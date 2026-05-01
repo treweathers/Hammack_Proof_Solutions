@@ -515,3 +515,54 @@ Induction is like knocking over a line of dominoes. You prove the first one fall
 * **Result:** This results exactly in the expansion for $(x+y)^{k+1}$.
 
 ---
+
+Don't let the "scary" labels get to you! Relations are just a way of pairing things up. Think of a relation $R$ on a set $A$ as a collection of arrows pointing from one element to another. 
+
+To master these, you just need to check three "pass/fail" tests:
+1.  **Reflexive:** Does every element point to itself? ($aRa$ for all $a$)
+2.  **Symmetric:** If $a \to b$, is there a $b \to a$?
+3.  **Transitive:** If $a \to b$ and $b \to c$, is there a shortcut $a \to c$?
+
+---
+
+## Section 11.2: Relations
+
+### Exercise 11.2.3: Small Finite Set
+**Relation:** $R = \{(a, b), (a, c), (c, b), (b, c)\}$ on $A = \{a, b, c\}$.
+* **Reflexive?** **No.** For $R$ to be reflexive, it must contain $(a, a), (b, b),$ and $(c, c)$. It contains none of these.
+* **Symmetric?** **No.** While it has $(c, b)$ and $(b, c)$, it has $(a, b)$ but **not** $(b, a)$.
+* **Transitive?** **No.** We have $(a, b)$ and $(b, c)$. For it to be transitive, we need the "shortcut" $(a, c)$. While $(a, c)$ is actually there, let's check another: we have $(a, c)$ and $(c, b)$. We need $(a, b)$, which is also there. Wait, check $(b, c)$ and $(c, b)$—we would need $(b, b)$, which is **missing**.
+* **Result:** None of the three.
+
+### Exercise 11.2.5: The Small Coordinate Set
+**Relation:** $R = \{(0, 0), (\sqrt{2}, 0), (0, \sqrt{2}), (\sqrt{2}, \sqrt{2})\}$ on $\mathbb{R}$.
+* **Reflexive?** **No.** To be reflexive on $\mathbb{R}$, every real number $x$ must satisfy $xRx$ (e.g., $(1, 1)$ must be there). This relation only has loops for $0$ and $\sqrt{2}$.
+* **Symmetric?** **Yes.** * $(0, 0)$ and $(\sqrt{2}, \sqrt{2})$ are their own reverses.
+    * The pair $(\sqrt{2}, 0)$ has its reverse $(0, \sqrt{2})$ present.
+* **Transitive?** **Yes.** All paths like $(\sqrt{2} \to 0 \to \sqrt{2})$ have their shortcuts $(\sqrt{2} \to \sqrt{2})$ present.
+* **Result:** Symmetric and Transitive only.
+
+### Exercise 11.2.9: Parity Relation
+**Relation:** $xRy$ iff $x$ and $y$ have the same parity (both even or both odd) on $\mathbb{Z}$.
+* **Reflexive?** **Yes.** Any integer $x$ has the same parity as itself.
+* **Symmetric?** **Yes.** If $x$ and $y$ have the same parity, then $y$ and $x$ have the same parity.
+* **Transitive?** **Yes.** If $x, y$ are both even and $y, z$ are both even, then $x, z$ are both even. (Same works for odd).
+* **What familiar relation is this?** This is **Congruence Modulo 2** ($x \equiv y \pmod 2$).
+
+### Exercise 11.2.13: Difference is an Integer
+**Relation:** $R = \{(x, y) \in \mathbb{R} \times \mathbb{R} : x - y \in \mathbb{Z}\}$ on $\mathbb{R}$.
+
+* **Reflexive:** Let $x \in \mathbb{R}$. Then $x - x = 0$. Since $0 \in \mathbb{Z}$, $xRx$ is true.
+* **Symmetric:** Suppose $xRy$. Then $x - y = k$ for some $k \in \mathbb{Z}$.
+    * Then $y - x = -(x - y) = -k$.
+    * Since $k$ is an integer, $-k$ is also an integer. Thus $yRx$.
+* **Transitive:** Suppose $xRy$ and $yRz$.
+    * Then $x - y = k$ and $y - z = m$ for some $k, m \in \mathbb{Z}$.
+    * Add the equations: $(x - y) + (y - z) = k + m$.
+    * $x - z = k + m$.
+    * Since the sum of two integers is an integer, $xRz$.
+* **Result:** It is an **Equivalence Relation** (it passed all three tests!).
+
+---
+
+

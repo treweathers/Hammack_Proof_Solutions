@@ -289,5 +289,57 @@ The logic here is: Assume the statement is **false**, then show this leads to a 
 * **The Contradiction:** As shown in Exercise 6.7, $n^2 \pmod 4$ can only be $0$ or $1$. It can never be $2$. **Contradiction.**
 
 ---
+## Discrete Math Study Guide: Chapter 7
+### Proofs of "If and Only If" ($P \iff Q$)
 
+To prove an "if and only if" statement, you must prove two directions:
+1.  **Forward ($\Rightarrow$):** If $P$, then $Q$.
+2.  **Backward ($\Leftarrow$):** If $Q$, then $P$.
+
+---
+
+### Exercise 7.3: Parity of a Polynomial
+**Statement:** $a^3 + a^2 + a$ is even if and only if $a$ is even.
+* **Forward ($\Rightarrow$):** Assume $a^3 + a^2 + a$ is even. We use **contrapositive**.
+    * Suppose $a$ is odd. Then $a = 2k+1$.
+    * $a^3 + a^2 + a = (\text{odd})^3 + (\text{odd})^2 + (\text{odd}) = \text{odd} + \text{odd} + \text{odd} = \text{odd}$.
+    * Since the result is odd, the contrapositive is proven.
+* **Backward ($\Leftarrow$):** Assume $a$ is even. Then $a = 2k$.
+    * $a^3 + a^2 + a = (2k)^3 + (2k)^2 + 2k = 8k^3 + 4k^2 + 2k = 2(4k^3 + 2k^2 + k)$.
+    * This is clearly even.
+
+### Exercise 7.5: Cubic Parity
+**Statement:** $a$ is odd if and only if $a^3$ is odd.
+* **Forward ($\Rightarrow$):** Assume $a$ is odd ($a = 2k+1$).
+    * $a^3 = (2k+1)^3 = 8k^3 + 12k^2 + 6k + 1 = 2(4k^3 + 6k^2 + 3k) + 1$.
+    * Thus, $a^3$ is odd.
+* **Backward ($\Leftarrow$):** Assume $a^3$ is odd. We use **contrapositive**.
+    * Suppose $a$ is even ($a = 2k$).
+    * $a^3 = (2k)^3 = 8k^3 = 2(4k^3)$.
+    * Thus, $a^3$ is even. Contrapositive proven.
+
+### Exercise 7.9: Divisibility by 14
+**Statement:** $14 \mid a$ iff $7 \mid a$ and $2 \mid a$.
+* **Forward ($\Rightarrow$):** Assume $14 \mid a$.
+    * Then $a = 14k$ for some $k \in \mathbb{Z}$.
+    * Since $a = 7(2k)$, $7 \mid a$. Since $a = 2(7k)$, $2 \mid a$.
+* **Backward ($\Leftarrow$):** Assume $7 \mid a$ and $2 \mid a$.
+    * Since $2 \mid a$, $a$ is even, so $a = 2m$.
+    * Substitute this into the other condition: $7 \mid 2m$.
+    * By **Euclid's Lemma**, since $7$ is prime and $7 \nmid 2$, it must be that $7 \mid m$.
+    * So $m = 7j$.
+    * Substitute back: $a = 2(7j) = 14j$. Thus $14 \mid a$.
+
+### Exercise 7.11: Product Parity
+**Statement:** $(a-3)b^2$ is even if and only if $a$ is odd or $b$ is even.
+* **Forward ($\Rightarrow$):** Assume $(a-3)b^2$ is even. Use **contrapositive**.
+    * Negate "($a$ is odd or $b$ is even)": Assume $a$ is even **and** $b$ is odd.
+    * If $a$ is even, $(a-3)$ is (even - odd) = **odd**.
+    * If $b$ is odd, $b^2$ is **odd**.
+    * The product of two odds is **odd**. So $(a-3)b^2$ is odd. Contrapositive proven.
+* **Backward ($\Leftarrow$):** Assume $a$ is odd or $b$ is even.
+    * **Case 1:** $a$ is odd. Then $(a-3)$ is (odd - odd) = **even**. A product involving an even factor is even.
+    * **Case 2:** $b$ is even. Then $b^2$ is **even**. A product involving an even factor is even.
+
+---]
 

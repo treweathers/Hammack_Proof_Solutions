@@ -838,8 +838,132 @@ Inverse functions are all about "undoing" the mapping. If a function $f$ takes $
 
 ---
 
+This is where discrete math starts to feel like magic. We are moving from "counting" to "measuring the size of infinity."
+
+**The Golden Rule of Cardinality:** Two sets have the same size ($|A| = |B|$) if and only if there exists a **bijection** between them. If you can pair every element up with no one left over, the sets are the same size—even if one seems "bigger" at first glance.
+
+---
+
+## 1. Landmark Proofs of Cardinality
+
+### Proof: $|\mathbb{N}| = |\mathbb{Z}|$
+* **The Problem:** $\mathbb{Z}$ looks twice as big because it has negative numbers.
+* **The Solution:** We "zigzag" through the integers.
+    * Map $1 \to 0$
+    * Map $2 \to 1$
+    * Map $3 \to -1$
+    * Map $4 \to 2$
+    * Map $5 \to -2$
+* **The Bijection:**
+    $$f(n) = \begin{cases} \frac{n}{2} & \text{if } n \text{ is even} \\ -\frac{n-1}{2} & \text{if } n \text{ is odd} \end{cases}$$
+* This formula hits every integer exactly once. Thus, they are the same size.
+
+### Proof: $|\mathbb{R}| = |(0, 1)|$
+* **The Problem:** How can an infinite line be the same size as a tiny segment?
+* **The Solution:** Use a tangent function. 
+* **The Bijection:** $f:(0, 1) \to \mathbb{R}$ defined by $f(x) = \tan(\pi x - \frac{\pi}{2})$.
+    * As $x \to 0$, $f(x) \to -\infty$.
+    * As $x \to 1$, $f(x) \to \infty$.
+* Since the tangent function is a bijection over this interval, the sets have equal cardinality.
 
 
-We are flying through this! Only two chapters left. Chapter 14 is where we deal with **Cardinality**—the actual "size" of infinity. 
 
-**Ready to prove that there are just as many integers as there are natural numbers?**
+### Proof: $|\mathbb{N}| \neq |\mathbb{R}|$ (Cantor's Diagonal Argument)
+* **The Method:** Contradiction.
+* **Assume False:** Suppose we *could* list all real numbers between 0 and 1 in a list: $r_1, r_2, r_3, \dots$
+* **Construct a "Monster":** Create a new decimal $x = 0.d_1 d_2 d_3 \dots$ where $d_1$ is different from the first digit of $r_1$, $d_2$ is different from the second digit of $r_2$, and so on.
+* **The Contradiction:** This new number $x$ cannot be in the list because it differs from every single $r_n$ by at least one digit. 
+* **Conclusion:** $\mathbb{R}$ is "uncountably" infinite. It is a bigger level of infinity than $\mathbb{N}$.
+
+---
+
+## 2. Section 14.1 Exercises
+
+**Exercise 14.1.5: Multiples of 3 vs Multiples of 7**
+* **Sets:** $A = \{3k : k \in \mathbb{Z}\}$ and $B = \{7k : k \in \mathbb{Z}\}$.
+* **Bijection:** To turn a $3k$ into a $7k$, we first "undo" the 3 and then "apply" the 7.
+* **Formula:** $f: A \to B$ defined by $f(x) = \frac{7}{3}x$.
+* **Verification:** If $x = 3k$, then $f(3k) = \frac{7}{3}(3k) = 7k$, which is in $B$. Since it's a linear function, it's a bijection.
+
+**Exercise 14.1.9: $\{0, 1\} \times \mathbb{N}$ and $\mathbb{N}$**
+* **Sets:** The domain is pairs like $(0, 1), (0, 2), \dots$ and $(1, 1), (1, 2), \dots$.
+* **Strategy:** Map the $(0, n)$ pairs to odd numbers and the $(1, n)$ pairs to even numbers.
+* **Formula:** $f: \{0, 1\} \times \mathbb{N} \to \mathbb{N}$ defined by:
+    $$f(a, n) = 2n - a$$
+    * If $a=0$: $f(0, n) = 2n$ (all even numbers).
+    * If $a=1$: $f(1, n) = 2n - 1$ (all odd numbers).
+* **Result:** Every natural number is covered exactly once.
+
+**Exercise 14.1.13: $\mathcal{P}(\mathbb{N})$ and $\mathcal{P}(\mathbb{Z})$**
+* **Strategy:** We already know a bijection $g: \mathbb{N} \to \mathbb{Z}$ exists (from the zigzag proof above).
+* **Bijection:** To map a subset $S \subseteq \mathbb{N}$ to a subset of $\mathbb{Z}$, simply apply $g$ to every element in $S$.
+* **Formula:** $f: \mathcal{P}(\mathbb{N}) \to \mathcal{P}(\mathbb{Z})$ defined by $f(S) = \{g(n) : n \in S\}$.
+* **Result:** Since $g$ is a bijection, this "lifting" to power sets is also a bijection.
+
+---
+
+You made it to the final boss! Let’s wrap this up.
+
+---
+
+## 1. Landmark Proofs: Countability
+
+### Proof: $\mathbb{Q}$ (The Rationals) is Countable
+* **The Problem:** Between any two integers, there are infinitely many fractions. How can we list them?
+* **The Strategy:** Arrange all fractions $\frac{a}{b}$ in a grid where the numerator increases horizontally and the denominator increases vertically.
+* **The Method:** "Snake" through the grid diagonally. Start at $\frac{1}{1}$, then $\frac{2}{1}, \frac{1}{2}$, then $\frac{1}{3}, \frac{2}{2}, \frac{3}{1}$, and so on. Skip any fraction that isn't in simplest form (like $\frac{2}{2}$ or $\frac{4}{2}$).
+* **Conclusion:** Since every possible fraction appears somewhere in this grid and our "snake" path eventually hits every spot, we can assign each fraction a natural number ($1, 2, 3, \dots$). Thus, $\mathbb{Q}$ is countable.
+
+
+### Proof: $\mathbb{R}$ (The Reals) is Uncountable
+* **The Method:** Cantor's Diagonal Argument (as summarized in the previous section).
+* **Key Insight:** No matter how you try to list real numbers, you can always construct a new real number that isn't on your list by changing the diagonal digits. 
+* **Conclusion:** $|\mathbb{R}| > |\mathbb{N}|$.
+
+---
+
+## 2. Section 14.2 Exercises
+
+### Exercise 14.2.3: Ordered Pairs of Integers
+**Statement:** Prove $A = \{(5n, -3n) : n \in \mathbb{Z}\}$ is countably infinite.
+* **Proof:** 1. Define a function $f: \mathbb{Z} \to A$ by $f(n) = (5n, -3n)$.
+    2. This function is clearly a bijection (each $n$ gives a unique pair, and every pair in $A$ is generated by an $n$).
+    3. We already proved in Chapter 14.1 that $\mathbb{Z}$ is countably infinite (because there is a bijection $g: \mathbb{N} \to \mathbb{Z}$).
+    4. Since a bijection exists from $\mathbb{N}$ to $\mathbb{Z}$, and from $\mathbb{Z}$ to $A$, the composition $f \circ g$ is a bijection from $\mathbb{N}$ to $A$.
+* **Conclusion:** $A$ is countably infinite.
+
+### Exercise 14.2.5: Subset of Irrationals
+**Statement:** Prove or disprove: There exists a countably infinite subset of the set of irrational numbers.
+* **Assessment:** **True.**
+* **Proof:** Consider the set $S = \{\sqrt{2} \cdot n : n \in \mathbb{N}\}$. 
+    * Since $\sqrt{2}$ is irrational, $\sqrt{2}, 2\sqrt{2}, 3\sqrt{2}, \dots$ are all irrational.
+    * The function $f: \mathbb{N} \to S$ defined by $f(n) = \sqrt{2}n$ is a bijection.
+* **Conclusion:** $S$ is a countably infinite subset of the irrationals.
+
+### Exercise 14.2.9: $\{0, 1\} \times \mathbb{N}$
+**Statement:** Prove or disprove: The set $\{0, 1\} \times \mathbb{N}$ is countably infinite.
+* **Assessment:** **True.**
+* **Proof:** We literally found the bijection for this in Exercise 14.1.9! 
+    * The function $f(a, n) = 2n - a$ maps $\{0, 1\} \times \mathbb{N}$ to $\mathbb{N}$ bijectively.
+* **Conclusion:** Since a bijection to $\mathbb{N}$ exists, it is countably infinite by definition.
+
+### Exercise 14.2.15: The Fundamental Theorem of Arithmetic Approach
+**Statement:** Show $\phi: \mathbb{N} \times \mathbb{N} \to \mathbb{N}$ defined as $\phi(m, n) = 2^{n-1}(2m - 1)$ is bijective.
+* **Proof of Injective:**
+    * Assume $\phi(m_1, n_1) = \phi(m_2, n_2) \implies 2^{n_1-1}(2m_1 - 1) = 2^{n_2-1}(2m_2 - 1)$.
+    * By the **Unique Factorization Theorem**, every integer has a unique representation as a power of 2 times an odd number.
+    * The power of 2 must match: $n_1 - 1 = n_2 - 1 \implies n_1 = n_2$.
+    * The odd part must match: $2m_1 - 1 = 2m_2 - 1 \implies m_1 = m_2$.
+* **Proof of Surjective:**
+    * Pick any $x \in \mathbb{N}$. Every natural number $x$ can be factored into its prime components.
+    * Pull out all the 2s. Let $x = 2^k \cdot \text{odd}$.
+    * Set $n - 1 = k \implies n = k + 1$.
+    * Set $2m - 1 = \text{odd} \implies m = \frac{\text{odd} + 1}{2}$.
+    * Since $n$ and $m$ will always be natural numbers, every $x$ is covered.
+* **Conclusion:** $\phi$ is a bijection, so $\mathbb{N} \times \mathbb{N}$ is countably infinite.
+
+---
+
+**WE ARE FINISHED.** 57 problems, 16 chapters, and one massive master plan. You have the logic, you have the patterns, and you have the proofs. 
+
+Go crush that final. You’ve got this! 🎓🔥

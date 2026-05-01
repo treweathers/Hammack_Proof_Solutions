@@ -341,5 +341,60 @@ To prove an "if and only if" statement, you must prove two directions:
     * **Case 1:** $a$ is odd. Then $(a-3)$ is (odd - odd) = **even**. A product involving an even factor is even.
     * **Case 2:** $b$ is even. Then $b^2$ is **even**. A product involving an even factor is even.
 
----]
+---
+
+## Discrete Math Study Guide: Chapter 8
+### Proofs Involving Sets
+
+To prove $X \subseteq Y$, we use the **Element Method**: pick an arbitrary element $x \in X$ and show that it must also be in $Y$. To prove $X = Y$, show $X \subseteq Y$ and $Y \subseteq X$.
+
+---
+
+### Exercise 8.1: Multiples and Intersections
+**Statement:** $\{12n : n \in \mathbb{Z}\} \subseteq \{2n : n \in \mathbb{Z}\} \cap \{3n : n \in \mathbb{Z}\}$
+* **Proof:** 1.  Let $x \in \{12n : n \in \mathbb{Z}\}$. This means $x = 12k$ for some integer $k$.
+    2.  We can write $x = 2(6k)$. Since $6k \in \mathbb{Z}$, $x$ is a multiple of 2, so $x \in \{2n : n \in \mathbb{Z}\}$.
+    3.  We can also write $x = 3(4k)$. Since $4k \in \mathbb{Z}$, $x$ is a multiple of 3, so $x \in \{3n : n \in \mathbb{Z}\}$.
+    4.  Since $x$ is in both sets, $x \in \{2n : n \in \mathbb{Z}\} \cap \{3n : n \in \mathbb{Z}\}$.
+* **Conclusion:** The subset relation holds.
+
+### Exercise 8.3: Divisor Sets
+**Statement:** If $k \in \mathbb{Z}$, then $\{n \in \mathbb{Z} : n \mid k\} \subseteq \{n \in \mathbb{Z} : n \mid k^2\}$
+* **Proof:**
+    1.  Let $x$ be an arbitrary element in the set of divisors of $k$. This means $x \mid k$.
+    2.  By definition of divisibility, $k = xj$ for some integer $j$.
+    3.  Square both sides: $k^2 = (xj)^2 = x^2 j^2 = x(xj^2)$.
+    4.  Since $xj^2$ is an integer, $x \mid k^2$.
+    5.  Therefore, $x \in \{n \in \mathbb{Z} : n \mid k^2\}$.
+
+### Exercise 8.13: DeMorgan’s Law for Sets
+**Statement:** $A - (B \cup C) = (A - B) \cap (A - C)$
+
+* **Proof ($\subseteq$):**
+    1.  Let $x \in A - (B \cup C)$. By definition, $x \in A$ and $x \notin (B \cup C)$.
+    2.  $x \notin (B \cup C)$ means $x$ is not in $B$ **and** $x$ is not in $C$.
+    3.  Since $x \in A$ and $x \notin B$, then $x \in (A - B)$.
+    4.  Since $x \in A$ and $x \notin C$, then $x \in (A - C)$.
+    5.  Therefore, $x \in (A - B) \cap (A - C)$.
+* **Proof ($\supseteq$):**
+    1.  Let $x \in (A - B) \cap (A - C)$.
+    2.  This means $x \in (A - B)$ (so $x \in A$ and $x \notin B$) and $x \in (A - C)$ (so $x \in A$ and $x \notin C$).
+    3.  Since $x \notin B$ and $x \notin C$, then $x \notin (B \cup C)$.
+    4.  Combined with $x \in A$, we have $x \in A - (B \cup C)$.
+
+### Exercise 8.15: Distribution of Difference over Intersection
+**Statement:** $(A \cap B) - C = (A - C) \cap (B - C)$
+* **Proof ($\subseteq$):**
+    1.  Let $x \in (A \cap B) - C$. Then $x \in (A \cap B)$ and $x \notin C$.
+    2.  This means $x \in A, x \in B$, and $x \notin C$.
+    3.  Since $x \in A$ and $x \notin C$, $x \in (A - C)$.
+    4.  Since $x \in B$ and $x \notin C$, $x \in (B - C)$.
+    5.  Thus, $x \in (A - C) \cap (B - C)$.
+* **Proof ($\supseteq$):**
+    1.  Let $x \in (A - C) \cap (B - C)$.
+    2.  Then $x \in (A - C)$ (so $x \in A, x \notin C$) and $x \in (B - C)$ (so $x \in B, x \notin C$).
+    3.  Since $x \in A$ and $x \in B$, $x \in (A \cap B)$.
+    4.  Since $x \notin C$, we conclude $x \in (A \cap B) - C$.
+
+---
 

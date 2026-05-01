@@ -565,4 +565,281 @@ To master these, you just need to check three "pass/fail" tests:
 
 ---
 
+Equivalence classes are basically "clubs" where every member is related to every other member. If a relation is an **Equivalence Relation** (Reflexive, Symmetric, and Transitive), it partitions the set into these disjoint clubs.
 
+---
+
+## Section 11.3: Equivalence Relations & Classes
+
+### Exercise 11.3.5: Relations on $A = \{a, b\}$
+There are two ways to group $\{a, b\}$ such that the rules of equivalence are followed:
+1.  **The Identity Relation:** Each element is only in a club with itself.
+    * $R_1 = \{(a, a), (b, b)\}$.
+    * Classes: $[a] = \{a\}$, $[b] = \{b\}$.
+2.  **The Universal Relation:** Everyone is related to everyone.
+    * $R_2 = \{(a, a), (b, b), (a, b), (b, a)\}$.
+    * Class: $[a] = \{a, b\}$.
+
+
+
+---
+
+### Exercise 11.3.7: $3x - 5y$ is even
+**Relation:** $xRy \iff 3x - 5y = 2k$ for some $k \in \mathbb{Z}$.
+* **Reflexive:** $3x - 5x = -2x = 2(-x)$. Since $-x \in \mathbb{Z}$, $xRx$.
+* **Symmetric:** Suppose $3x - 5y = 2k$. We want to see if $3y - 5x$ is even.
+    * $(3y - 5x) + (3x - 5y) = -2x - 2y = 2(-x - y)$.
+    * Since the sum and one term are even, the other term $(3y - 5x)$ must be even.
+* **Transitive:** Suppose $3x - 5y = 2k$ and $3y - 5z = 2m$.
+    * Add them: $3x - 2y - 5z = 2k + 2m$.
+    * $3x - 5z = 2k + 2m + 2y = 2(k + m + y)$. Even!
+* **Equivalence Classes:** * If $x$ is even, $3(\text{even}) - 5y = \text{even} \implies y$ must be even.
+    * If $x$ is odd, $3(\text{odd}) - 5y = \text{even} \implies y$ must be odd.
+    * **Classes:** The set of even integers $\mathbb{E}$ and the set of odd integers $\mathbb{O}$.
+
+---
+
+### Exercise 11.3.9: $4 \mid (x + 3y)$
+**Relation:** $xRy \iff x + 3y = 4k$.
+* **Reflexive:** $x + 3x = 4x$. Clearly $4 \mid 4x$.
+* **Symmetric:** Suppose $x + 3y = 4k$. Then $x = 4k - 3y$.
+    * Check $y + 3x$: $y + 3(4k - 3y) = y + 12k - 9y = 12k - 8y = 4(3k - 2y)$.
+    * Divisible by 4. $yRx$.
+* **Transitive:** Suppose $x + 3y = 4k$ and $y + 3z = 4m$.
+    * Add them: $x + 4y + 3z = 4(k + m)$.
+    * $x + 3z = 4(k + m - y)$. Divisible by 4.
+* **Equivalence Classes:** This is actually just **Congruence Modulo 4**.
+    * $x + 3y \equiv 0 \pmod 4 \implies x \equiv -3y \equiv y \pmod 4$.
+    * **Classes:** $\{ [0], [1], [2], [3] \}$ (remainders when divided by 4).
+
+---
+
+### Exercise 11.3.11: Infinite set, Infinite classes?
+**Statement:** If $R$ is an equivalence relation on an infinite set $A$, then $R$ has infinitely many equivalence classes.
+* **Assessment:** **False.**
+* **Disproof (Counterexample):** Let $A = \mathbb{Z}$ (an infinite set). Define $xRy$ if $x$ and $y$ have the same parity (Exercise 11.2.9).
+    * $A$ is infinite.
+    * $R$ is an equivalence relation.
+    * However, there are only **two** equivalence classes: $[0]$ (evens) and $[1]$ (odds).
+    * Two is not infinite.
+
+---
+
+Equivalence classes are basically "clubs" where every member is related to every other member. If a relation is an **Equivalence Relation** (Reflexive, Symmetric, and Transitive), it partitions the set into these disjoint clubs.
+
+---
+
+## Section 11.3: Equivalence Relations & Classes
+
+### Exercise 11.3.5: Relations on $A = \{a, b\}$
+There are two ways to group $\{a, b\}$ such that the rules of equivalence are followed:
+1.  **The Identity Relation:** Each element is only in a club with itself.
+    * $R_1 = \{(a, a), (b, b)\}$.
+    * Classes: $[a] = \{a\}$, $[b] = \{b\}$.
+2.  **The Universal Relation:** Everyone is related to everyone.
+    * $R_2 = \{(a, a), (b, b), (a, b), (b, a)\}$.
+    * Class: $[a] = \{a, b\}$.
+
+
+
+---
+
+### Exercise 11.3.7: $3x - 5y$ is even
+**Relation:** $xRy \iff 3x - 5y = 2k$ for some $k \in \mathbb{Z}$.
+* **Reflexive:** $3x - 5x = -2x = 2(-x)$. Since $-x \in \mathbb{Z}$, $xRx$.
+* **Symmetric:** Suppose $3x - 5y = 2k$. We want to see if $3y - 5x$ is even.
+    * $(3y - 5x) + (3x - 5y) = -2x - 2y = 2(-x - y)$.
+    * Since the sum and one term are even, the other term $(3y - 5x)$ must be even.
+* **Transitive:** Suppose $3x - 5y = 2k$ and $3y - 5z = 2m$.
+    * Add them: $3x - 2y - 5z = 2k + 2m$.
+    * $3x - 5z = 2k + 2m + 2y = 2(k + m + y)$. Even!
+* **Equivalence Classes:** * If $x$ is even, $3(\text{even}) - 5y = \text{even} \implies y$ must be even.
+    * If $x$ is odd, $3(\text{odd}) - 5y = \text{even} \implies y$ must be odd.
+    * **Classes:** The set of even integers $\mathbb{E}$ and the set of odd integers $\mathbb{O}$.
+
+---
+
+### Exercise 11.3.9: $4 \mid (x + 3y)$
+**Relation:** $xRy \iff x + 3y = 4k$.
+* **Reflexive:** $x + 3x = 4x$. Clearly $4 \mid 4x$.
+* **Symmetric:** Suppose $x + 3y = 4k$. Then $x = 4k - 3y$.
+    * Check $y + 3x$: $y + 3(4k - 3y) = y + 12k - 9y = 12k - 8y = 4(3k - 2y)$.
+    * Divisible by 4. $yRx$.
+* **Transitive:** Suppose $x + 3y = 4k$ and $y + 3z = 4m$.
+    * Add them: $x + 4y + 3z = 4(k + m)$.
+    * $x + 3z = 4(k + m - y)$. Divisible by 4.
+* **Equivalence Classes:** This is actually just **Congruence Modulo 4**.
+    * $x + 3y \equiv 0 \pmod 4 \implies x \equiv -3y \equiv y \pmod 4$.
+    * **Classes:** $\{ [0], [1], [2], [3] \}$ (remainders when divided by 4).
+
+---
+
+### Exercise 11.3.11: Infinite set, Infinite classes?
+**Statement:** If $R$ is an equivalence relation on an infinite set $A$, then $R$ has infinitely many equivalence classes.
+* **Assessment:** **False.**
+* **Disproof (Counterexample):** Let $A = \mathbb{Z}$ (an infinite set). Define $xRy$ if $x$ and $y$ have the same parity (Exercise 11.2.9).
+    * $A$ is infinite.
+    * $R$ is an equivalence relation.
+    * However, there are only **two** equivalence classes: $[0]$ (evens) and $[1]$ (odds).
+    * Two is not infinite.
+
+---
+No problem! Let’s hit the reset button on Section 12.2 and use these specific problems. This is a critical section because "bijective" is the gold standard for comparing the sizes of infinite sets later (Chapter 14).
+
+---
+
+## Discrete Math Study Guide: Chapter 12
+### Injective, Surjective, and Bijective Functions
+
+**The Cheat Sheet:**
+* **Injective (1-to-1):** Every input has a *unique* output. 
+    * *Test:* Assume $f(x) = f(y)$. If you can prove $x = y$, it’s injective.
+* **Surjective (Onto):** Every element in the codomain (target set) is "hit" by at least one input.
+    * *Test:* Pick an arbitrary $y$ in the codomain. Can you find an $x$ in the domain such that $f(x) = y$?
+* **Bijective:** Both Injective AND Surjective.
+
+---
+
+### Exercise 12.2.5: The Linear Integer Function
+**Function:** $f: \mathbb{Z} \to \mathbb{Z}$ defined by $f(n) = 2n + 1$.
+
+* **Injective?** **Yes.**
+    * Assume $f(n_1) = f(n_2)$.
+    * $2n_1 + 1 = 2n_2 + 1$.
+    * Subtract 1: $2n_1 = 2n_2$.
+    * Divide by 2: $n_1 = n_2$.
+* **Surjective?** **No.**
+    * The codomain is $\mathbb{Z}$ (all integers).
+    * However, $2n+1$ is the definition of an **odd** integer.
+    * There is no integer $n$ that will output an even number (like $2$). 
+    * *Example:* If $2n+1 = 2$, then $2n = 1$, so $n = 0.5$, which is not in the domain $\mathbb{Z}$.
+
+---
+
+### Exercise 12.2.7: Mapping Pairs to Integers
+**Function:** $f: \mathbb{Z} \times \mathbb{Z} \to \mathbb{Z}$ defined by $f(m, n) = 2n - 4m$.
+
+* **Injective?** **No.**
+    * We need two different pairs $(m, n)$ that give the same result.
+    * Let $(m, n) = (1, 2) \implies f(1, 2) = 2(2) - 4(1) = 0$.
+    * Let $(m, n) = (2, 4) \implies f(2, 4) = 2(4) - 4(2) = 0$.
+    * Since $(1, 2) \neq (2, 4)$ but $f(1, 2) = f(2, 4)$, it is not injective.
+* **Surjective?** **No.**
+    * Notice $2n - 4m = 2(n - 2m)$.
+    * This result is always **even** because it's a multiple of 2.
+    * You can never get an odd integer (like $1$) as an output.
+
+---
+
+### Exercise 12.2.9: Proving a Bijection (Rational Function)
+**Function:** $f: \mathbb{R} - \{2\} \to \mathbb{R} - \{5\}$ defined by $f(x) = \frac{5x+1}{x-2}$.
+
+* **Proof of Injective:**
+    * Assume $f(a) = f(b)$: $\frac{5a+1}{a-2} = \frac{5b+1}{b-2}$.
+    * Cross-multiply: $(5a+1)(b-2) = (5b+1)(a-2)$.
+    * Expand: $5ab - 10a + b - 2 = 5ab - 10b + a - 2$.
+    * Cancel $5ab$ and $-2$: $-10a + b = -10b + a$.
+    * Rearrange: $11b = 11a \implies a = b$. **Injective!**
+* **Proof of Surjective:**
+    * Let $y \in \mathbb{R} - \{5\}$. Solve $y = \frac{5x+1}{x-2}$ for $x$.
+    * $y(x-2) = 5x + 1 \implies yx - 2y = 5x + 1$.
+    * $yx - 5x = 2y + 1 \implies x(y-5) = 2y + 1$.
+    * $x = \frac{2y+1}{y-5}$.
+    * Since $y \neq 5$, this fraction is always defined. Since $x$ is a real number (and you can check $x \neq 2$), every $y$ has an $x$. **Surjective!**
+* **Conclusion:** Since it is both, it is **bijective**.
+
+
+
+---
+
+### Exercise 12.2.11: The Signed Natural Numbers
+**Function:** $\theta: \{0, 1\} \times \mathbb{N} \to \mathbb{Z}$ defined by $\theta(a, b) = (-1)^a b$.
+*Note: The domain is pairs where the first item is 0 or 1, and the second is a positive integer $\{1, 2, 3, \dots\}$.*
+
+* **Injective?** **Yes.**
+    * If $a=0$, the output is $(1)b = b$ (positive integers).
+    * If $a=1$, the output is $(-1)b = -b$ (negative integers).
+    * Since positive and negative integers never overlap, and each $b$ is unique, no two pairs $(a, b)$ can produce the same result.
+* **Surjective?** **No.**
+    * The codomain is $\mathbb{Z}$ (all integers, including zero).
+    * Can we ever get $0$? 
+    * $(-1)^a b = 0$ would require $b=0$. But $b \in \mathbb{N}$, and the set of natural numbers (in most textbooks for this course) starts at $1$. 
+    * Zero is never hit.
+* **Bijective?** **No**, because it failed surjectivity.
+
+---
+
+Inverse functions are all about "undoing" the mapping. If a function $f$ takes $x$ to $y$, the inverse $f^{-1}$ must take that $y$ right back to $x$. 
+
+**Crucial Rule:** A function has an inverse **if and only if** it is bijective.
+
+---
+
+## Section 12.5: Inverse Functions
+
+### Exercise 12.5.1: Linear Integer Inverse
+**Function:** $f: \mathbb{Z} \to \mathbb{Z}, f(n) = 6 - n$.
+
+* **Check Bijective:**
+    * **Injective:** $6 - n_1 = 6 - n_2 \implies -n_1 = -n_2 \implies n_1 = n_2$. (Yes)
+    * **Surjective:** Let $y \in \mathbb{Z}$. Solve $y = 6 - n$ for $n$. We get $n = 6 - y$. Since $y$ is an integer, $6-y$ is an integer. (Yes)
+* **Find $f^{-1}(n)$:**
+    * Set $y = 6 - n$.
+    * Solve for $n$: $n = 6 - y$.
+    * **Result:** $f^{-1}(n) = 6 - n$. (This function is its own inverse!)
+
+---
+
+### Exercise 12.5.6: Systems of Equations in $\mathbb{Z} \times \mathbb{Z}$
+**Function:** $f(m, n) = (5m + 4n, 4m + 3n)$.
+
+* **Strategy:** Set $(x, y) = (5m + 4n, 4m + 3n)$ and solve for $m$ and $n$ in terms of $x$ and $y$.
+* **Equations:**
+    1. $5m + 4n = x$
+    2. $4m + 3n = y$
+* **Solve:**
+    * Multiply (1) by 3 and (2) by 4:
+        * $15m + 12n = 3x$
+        * $16m + 12n = 4y$
+    * Subtract the first from the second: $(16m - 15m) = 4y - 3x \implies \mathbf{m = 4y - 3x}$.
+    * Substitute $m$ into (2): $4(4y - 3x) + 3n = y \implies 16y - 12x + 3n = y$.
+    * $3n = 12x - 15y \implies \mathbf{n = 4x - 5y}$.
+* **Result:** $f^{-1}(x, y) = (4y - 3x, 4x - 5y)$.
+
+---
+
+### Exercise 12.5.7: Non-linear Bijection on $\mathbb{R}^2$
+**Function:** $f(x, y) = ((x^2 + 1)y, x^3)$.
+
+* **Check Bijective:**
+    * If $f(x_1, y_1) = f(x_2, y_2)$, then $x_1^3 = x_2^3 \implies x_1 = x_2$.
+    * Then $(x_1^2 + 1)y_1 = (x_1^2 + 1)y_2$. Since $x^2+1$ is never zero, we divide to get $y_1 = y_2$. (Injective!)
+    * For any $(a, b)$, we can find $x = \sqrt[3]{b}$ and $y = \frac{a}{x^2+1}$. (Surjective!)
+* **Find Inverse:**
+    * $x^3 = y_{out} \implies x = \sqrt[3]{y_{out}}$.
+    * $(x^2 + 1)y_{in} = x_{out} \implies y_{in} = \frac{x_{out}}{x^2 + 1} = \frac{x_{out}}{(\sqrt[3]{y_{out}})^2 + 1}$.
+* **Result:** $f^{-1}(x, y) = \left( \frac{x}{\sqrt[3]{y^2} + 1}, \sqrt[3]{y} \right)$.
+
+---
+
+### Exercise 12.5.9: Swapping Domains
+**Function:** $f: \mathbb{R} \times \mathbb{N} \to \mathbb{N} \times \mathbb{R}$ defined as $f(x, y) = (y, 3xy)$.
+*Note: $y$ must be a natural number.*
+
+* **Check Bijective:**
+    * Assume $f(x_1, y_1) = f(x_2, y_2)$. Then $y_1 = y_2$.
+    * Then $3x_1y_1 = 3x_2y_2$. Since $y_1 \in \mathbb{N}$ (so $y_1 \ge 1$), we can divide by $3y_1$. $x_1 = x_2$. (Injective!)
+    * For any $(n, r) \in \mathbb{N} \times \mathbb{R}$, set $y = n$ and $3xn = r \implies x = \frac{r}{3n}$. (Surjective!)
+* **Find Inverse:**
+    * Let the output be $(a, b)$ where $a \in \mathbb{N}$ and $b \in \mathbb{R}$.
+    * $y = a$.
+    * $3xy = b \implies 3xa = b \implies x = \frac{b}{3a}$.
+* **Result:** $f^{-1}(a, b) = \left( \frac{b}{3a}, a \right)$.
+
+---
+
+
+
+We are flying through this! Only two chapters left. Chapter 14 is where we deal with **Cardinality**—the actual "size" of infinity. 
+
+**Ready to prove that there are just as many integers as there are natural numbers?**

@@ -82,6 +82,11 @@
 **Answer:** There exists a positive number $\epsilon$ such that for every positive number $M$, there is some $x > M$ such that $|f(x) - b| \ge \epsilon$.
 
 ---
-
-### What's the move?
-That's Chapter 2 in the bag. Ready to tackle **Chapter 3 (Counting & Binomial Theorem)** or do you want to double-check these logic gates first?
+13. Show that n
+3 =
+2
+2 + 3
+2 + 4
+2 + 5
+2 + · · · + n−1
+2.

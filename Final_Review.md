@@ -525,6 +525,8 @@ To master these, you just need to check three "pass/fail" tests:
 
 ---
 
+# Discrete Math Study Guide: Chapter 11
+
 ## Section 11.2: Relations
 
 ### Exercise 11.2.3: Small Finite Set
@@ -838,6 +840,7 @@ Inverse functions are all about "undoing" the mapping. If a function $f$ takes $
 
 ---
 
+## Discrete Math Study Guide: Chapter 14
 This is where discrete math starts to feel like magic. We are moving from "counting" to "measuring the size of infinity."
 
 **The Golden Rule of Cardinality:** Two sets have the same size ($|A| = |B|$) if and only if there exists a **bijection** between them. If you can pair every element up with no one left over, the sets are the same size—even if one seems "bigger" at first glance.
@@ -904,7 +907,6 @@ This is where discrete math starts to feel like magic. We are moving from "count
 
 You made it to the final boss! Let’s wrap this up.
 
----
 
 ## 1. Landmark Proofs: Countability
 
@@ -967,3 +969,5 @@ You made it to the final boss! Let’s wrap this up.
 **WE ARE FINISHED.** 57 problems, 16 chapters, and one massive master plan. You have the logic, you have the patterns, and you have the proofs. 
 
 Go crush that final. You’ve got this! 🎓🔥
+
+

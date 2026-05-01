@@ -1,6 +1,5 @@
-# Finals Prep
-
-## Discrete Math Study Guide: Chapter 2
+# Finals Prep: 16 sections
+# Discrete Math Study Guide: Chapter 2
 
 ## 1. Section 2.6: Truth Tables & Logical Equivalence
 
@@ -84,7 +83,7 @@
 **Answer:** There exists a positive number $\epsilon$ such that for every positive number $M$, there is some $x > M$ such that $|f(x) - b| \ge \epsilon$.
 
 ---
-## Discrete Math Study Guide: Chapter 3
+# Discrete Math Study Guide: Chapter 3
 ### Counting, Pascal’s Rule, and the Binomial Theorem
 
 ---
@@ -170,7 +169,7 @@
 
 ---
 
-## Discrete Math Study Guide: Chapter 5
+# Discrete Math Study Guide: Chapter 5
 ### Direct and Contrapositive Proofs
 
 This chapter is all about the "if $P$, then $Q$" structure. Remember:
@@ -233,7 +232,7 @@ This chapter is all about the "if $P$, then $Q$" structure. Remember:
 
 ---
 
-## Discrete Math Study Guide: Chapter 6
+# Discrete Math Study Guide: Chapter 6
 ### Proof by Contradiction
 
 The logic here is: Assume the statement is **false**, then show this leads to a logical disaster (a contradiction like $0=1$ or a number being both even and odd).
@@ -291,7 +290,7 @@ The logic here is: Assume the statement is **false**, then show this leads to a 
 * **The Contradiction:** As shown in Exercise 6.7, $n^2 \pmod 4$ can only be $0$ or $1$. It can never be $2$. **Contradiction.**
 
 ---
-## Discrete Math Study Guide: Chapter 7
+# Discrete Math Study Guide: Chapter 7
 ### Proofs of "If and Only If" ($P \iff Q$)
 
 To prove an "if and only if" statement, you must prove two directions:
@@ -345,7 +344,7 @@ To prove an "if and only if" statement, you must prove two directions:
 
 ---
 
-## Discrete Math Study Guide: Chapter 8
+# Discrete Math Study Guide: Chapter 8
 ### Proofs Involving Sets
 
 To prove $X \subseteq Y$, we use the **Element Method**: pick an arbitrary element $x \in X$ and show that it must also be in $Y$. To prove $X = Y$, show $X \subseteq Y$ and $Y \subseteq X$.
@@ -399,7 +398,7 @@ To prove $X \subseteq Y$, we use the **Element Method**: pick an arbitrary eleme
     4.  Since $x \notin C$, we conclude $x \in (A \cap B) - C$.
 
 ---
-## Discrete Math Study Guide: Chapter 9
+# Discrete Math Study Guide: Chapter 9
 ### Disproof and Counterexamples
 
 When a statement is universal (e.g., "For every $n$...") and you suspect it's false, you only need **one** specific case where it fails. This is a **counterexample**.
@@ -452,7 +451,7 @@ When a statement is universal (e.g., "For every $n$...") and you suspect it's fa
 
 ---
 
-## Discrete Math Study Guide: Chapter 10
+# Discrete Math Study Guide: Chapter 10
 ### Proof by Induction
 
 Induction is like knocking over a line of dominoes. You prove the first one falls (**Base Case**), and then you prove that if any one domino falls, it will definitely knock over the next one (**Inductive Step**).
@@ -527,7 +526,7 @@ To master these, you just need to check three "pass/fail" tests:
 
 ---
 
-## Discrete Math Study Guide: Chapter 11
+# Discrete Math Study Guide: Chapter 11
 
 ## Section 11.2: Relations
 
@@ -692,7 +691,7 @@ No problem! Let’s hit the reset button on Section 12.2 and use these specific 
 
 ---
 
-## Discrete Math Study Guide: Chapter 12
+# Discrete Math Study Guide: Chapter 12
 ### Injective, Surjective, and Bijective Functions
 
 **The Cheat Sheet:**
@@ -842,7 +841,7 @@ Inverse functions are all about "undoing" the mapping. If a function $f$ takes $
 
 ---
 
-## Discrete Math Study Guide: Chapter 14
+# Discrete Math Study Guide: Chapter 14
 This is where discrete math starts to feel like magic. We are moving from "counting" to "measuring the size of infinity."
 
 **The Golden Rule of Cardinality:** Two sets have the same size ($|A| = |B|$) if and only if there exists a **bijection** between them. If you can pair every element up with no one left over, the sets are the same size—even if one seems "bigger" at first glance.

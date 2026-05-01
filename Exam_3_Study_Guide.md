@@ -1,5 +1,5 @@
 # Chapter 11: Relations
-## 11..2 Relations
+## 11.2 Relations
 That is the million-dollar question! The "proof paralysis" usually happens because a relation can be defined in so many different ways (equations, divisibility, set notation).
 
 The secret is to look at the **verb** or **symbol** used in the definition. That tells you which "math language" to speak. 

@@ -231,3 +231,63 @@ This chapter is all about the "if $P$, then $Q$" structure. Remember:
 
 ---
 
+## Discrete Math Study Guide: Chapter 6
+### Proof by Contradiction
+
+The logic here is: Assume the statement is **false**, then show this leads to a logical disaster (a contradiction like $0=1$ or a number being both even and odd).
+
+---
+
+## 1. Landmark Proofs
+
+### Proof: $\sqrt{2}$ is Irrational
+* **Assume False:** Suppose $\sqrt{2}$ is **rational**. This means $\sqrt{2} = \frac{a}{b}$ for some $a, b \in \mathbb{Z}$ where the fraction is in **simplest form** (no common factors).
+* **Square both sides:** $2 = \frac{a^2}{b^2} \implies a^2 = 2b^2$.
+* **Deduce parity:** This means $a^2$ is even, so **$a$ must be even** ($a = 2k$).
+* **Substitute:** $(2k)^2 = 2b^2 \implies 4k^2 = 2b^2 \implies 2k^2 = b^2$.
+* **The Contradiction:** This means $b^2$ is even, so **$b$ must be even**.
+* **Result:** If $a$ and $b$ are both even, the fraction $\frac{a}{b}$ was not in simplest form. **Contradiction.**
+
+### Proof: Infinitude of Primes (Euclid)
+* **Assume False:** Suppose there is a finite set of primes $P = \{p_1, p_2, \dots, p_n\}$.
+* **Construct a new number:** Let $Q = (p_1 \times p_2 \times \dots \times p_n) + 1$.
+* **Analyze $Q$:**
+    * $Q$ is an integer greater than 1, so it must have a prime divisor.
+    * However, if you divide $Q$ by any prime in our "complete" list $P$, you get a remainder of **1**.
+    * Therefore, $Q$ is either prime itself or divisible by a prime not in our list.
+* **The Contradiction:** We found a prime not in our "complete" list. **Contradiction.**
+
+---
+
+## 2. Exercises
+
+**Exercise 6.7: Parity of Squares**
+* **Statement:** If $a, b \in \mathbb{Z}$, then $a^2 - 4b - 3 \neq 0$.
+* **Assume False:** Suppose $a^2 - 4b - 3 = 0$.
+* **Rearrange:** $a^2 = 4b + 3$.
+* **Analyze Modulo 4:** This says $a^2 \equiv 3 \pmod 4$.
+* **Check all cases for $a^2 \pmod 4$:**
+    * If $a$ is even ($4k$ or $4k+2$), $a^2$ is $0 \pmod 4$ or $4 \pmod 4 \equiv 0$.
+    * If $a$ is odd ($4k+1$ or $4k+3$), $a^2$ is $1 \pmod 4$ or $9 \pmod 4 \equiv 1$.
+* **The Contradiction:** A square can only be $0$ or $1 \pmod 4$. It can **never** be $3 \pmod 4$. **Contradiction.**
+
+**Exercise 6.16: AM-GM Inequality (Basic)**
+* **Statement:** If $a, b \in \mathbb{R}^+$, then $a + b \geq 2\sqrt{ab}$.
+* **Assume False:** Suppose $a + b < 2\sqrt{ab}$.
+* **Algebra:** Since $a, b > 0$, we can square both sides:
+    * $(a+b)^2 < 4ab$
+    * $a^2 + 2ab + b^2 < 4ab$
+    * $a^2 - 2ab + b^2 < 0$
+    * $(a - b)^2 < 0$
+* **The Contradiction:** The square of any real number must be $\geq 0$. It is impossible for $(a-b)^2 < 0$. **Contradiction.**
+
+**Exercise 6.17: Divisibility**
+* **Statement:** For every $n \in \mathbb{Z}$, $4 \nmid (n^2 + 2)$.
+* **Assume False:** Suppose $4 \mid (n^2 + 2)$ for some $n$.
+* **Algebra:** This means $n^2 + 2 = 4k$, or $n^2 = 4k - 2$.
+* **Analyze Modulo 4:** $n^2 \equiv -2 \equiv 2 \pmod 4$.
+* **The Contradiction:** As shown in Exercise 6.7, $n^2 \pmod 4$ can only be $0$ or $1$. It can never be $2$. **Contradiction.**
+
+---
+
+

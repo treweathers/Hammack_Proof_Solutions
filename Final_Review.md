@@ -397,4 +397,55 @@ To prove $X \subseteq Y$, we use the **Element Method**: pick an arbitrary eleme
     4.  Since $x \notin C$, we conclude $x \in (A \cap B) - C$.
 
 ---
+## Discrete Math Study Guide: Chapter 9
+### Disproof and Counterexamples
 
+When a statement is universal (e.g., "For every $n$...") and you suspect it's false, you only need **one** specific case where it fails. This is a **counterexample**.
+
+---
+
+### Exercise 9.2: Is it always prime?
+**Statement:** For every $n \in \mathbb{N}$, the integer $2n^2 - 4n + 31$ is prime.
+* **Assessment:** **False**.
+* **Strategy:** Many quadratic formulas like this look prime for small values, but eventually fail. Let's test values.
+    * $n=1: 2(1)^2 - 4(1) + 31 = 29$ (Prime)
+    * $n=2: 2(4) - 8 + 31 = 31$ (Prime)
+    * ... Skip ahead to see if we can make it a multiple of 31. Let $n = 31$.
+* **Disproof (Counterexample):** Let $n = 31$.
+    * $2(31)^2 - 4(31) + 31 = 31(2 \cdot 31 - 4 + 1) = 31(62 - 4 + 1) = 31(59)$.
+    * Since this is a product of two integers greater than 1 ($31 \times 59 = 1829$), the result is composite.
+    * **Result:** Disproven.
+
+### Exercise 9.5: Cartesian Product Union
+**Statement:** If $A, B, C$ and $D$ are sets, then $(A \times B) \cup (C \times D) = (A \cup C) \times (B \cup D)$.
+* **Assessment:** **False**.
+* **Visualization:** Think of rectangles on a coordinate plane. The left side is two separate "boxes." The right side is one giant "box" that contains both, plus some extra corners.
+
+* **Disproof (Counterexample):** Let $A=\{1\}, B=\{1\}, C=\{2\}, D=\{2\}$.
+    * Left Side: $(A \times B) \cup (C \times D) = \{(1,1)\} \cup \{(2,2)\} = \{(1,1), (2,2)\}$.
+    * Right Side: $(A \cup C) \times (B \cup D) = \{1,2\} \times \{1,2\} = \{(1,1), (1,2), (2,1), (2,2)\}$.
+    * The pairs $(1,2)$ and $(2,1)$ are in the right side but not the left.
+    * **Result:** Disproven.
+
+### Exercise 9.9: Power Sets and Differences
+**Statement:** If $A$ and $B$ are sets, then $\mathcal{P}(A) - \mathcal{P}(B) \subseteq \mathcal{P}(A - B)$.
+* **Assessment:** **False**.
+* **Disproof (Counterexample):** Let $A = \{1, 2\}$ and $B = \{2\}$.
+    * $A - B = \{1\}$.
+    * $\mathcal{P}(A) = \{\emptyset, \{1\}, \{2\}, \{1, 2\}\}$
+    * $\mathcal{P}(B) = \{\emptyset, \{2\}\}$
+    * $\mathcal{P}(A) - \mathcal{P}(B) = \{\{1\}, \{1, 2\}\}$.
+    * $\mathcal{P}(A - B) = \mathcal{P}(\{1\}) = \{\emptyset, \{1\}\}$.
+    * Note that $\{1, 2\} \in (\mathcal{P}(A) - \mathcal{P}(B))$ but $\{1, 2\} \notin \mathcal{P}(A - B)$.
+    * **Result:** Disproven.
+
+### Exercise 9.11: Additive vs Multiplicative Growth
+**Statement:** If $a, b \in \mathbb{N}$, then $a + b < ab$.
+* **Assessment:** **False**.
+* **Disproof (Counterexample):** Let $a = 1$ and $b = 1$.
+    * $1 + 1 = 2$.
+    * $1 \times 1 = 1$.
+    * $2 < 1$ is false. (Similarly, if $a=2, b=2$, then $2+2=4$ and $2\times 2=4$. $4 < 4$ is false).
+    * **Result:** Disproven.
+
+---

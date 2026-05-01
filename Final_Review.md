@@ -449,3 +449,69 @@ When a statement is universal (e.g., "For every $n$...") and you suspect it's fa
     * **Result:** Disproven.
 
 ---
+
+## Discrete Math Study Guide: Chapter 10
+### Proof by Induction
+
+Induction is like knocking over a line of dominoes. You prove the first one falls (**Base Case**), and then you prove that if any one domino falls, it will definitely knock over the next one (**Inductive Step**).
+
+
+
+---
+
+### Exercise 10.1: Sum of First $n$ Integers
+**Statement:** $1 + 2 + 3 + \dots + n = \frac{n^2 + n}{2}$ for every $n \in \mathbb{N}$.
+* **Base Case ($n=1$):**
+    * LHS: $1$
+    * RHS: $\frac{1^2 + 1}{2} = \frac{2}{2} = 1$. Matches.
+* **Inductive Step:**
+    * Assume $1 + 2 + \dots + k = \frac{k^2 + k}{2}$ for some $k \in \mathbb{N}$.
+    * We want to show the formula holds for $k+1$: $(1 + 2 + \dots + k) + (k+1)$.
+    * Substitute our assumption: $\frac{k^2 + k}{2} + (k+1)$.
+    * Get a common denominator: $\frac{k^2 + k + 2(k+1)}{2} = \frac{k^2 + 3k + 2}{2}$.
+    * Factor the numerator: $\frac{(k+1)(k+2)}{2}$.
+    * Check target: $\frac{(k+1)^2 + (k+1)}{2} = \frac{k^2 + 2k + 1 + k + 1}{2} = \frac{k^2 + 3k + 2}{2}$.
+* **Conclusion:** By induction, the statement is true for all $n \in \mathbb{N}$.
+
+---
+
+### Exercise 10.5: Sum of Powers of 2
+**Statement:** $2^1 + 2^2 + \dots + 2^n = 2^{n+1} - 2$.
+* **Base Case ($n=1$):**
+    * LHS: $2^1 = 2$.
+    * RHS: $2^{1+1} - 2 = 4 - 2 = 2$. Matches.
+* **Inductive Step:**
+    * Assume $\sum_{i=1}^k 2^i = 2^{k+1} - 2$.
+    * For $k+1$: $(2^1 + \dots + 2^k) + 2^{k+1}$.
+    * Substitute assumption: $(2^{k+1} - 2) + 2^{k+1}$.
+    * Combine like terms: $2(2^{k+1}) - 2 = 2^{k+2} - 2$.
+    * This matches the formula for $n = k+1$.
+
+---
+
+### Exercise 10.7: Sum of $n(n+2)$
+**Statement:** $\sum_{i=1}^n i(i+2) = \frac{n(n+1)(2n+7)}{6}$.
+* **Base Case ($n=1$):**
+    * LHS: $1(1+2) = 3$.
+    * RHS: $\frac{1(2)(9)}{6} = \frac{18}{6} = 3$. Matches.
+* **Inductive Step:**
+    * Assume $\sum_{i=1}^k i(i+2) = \frac{k(k+1)(2k+7)}{6}$.
+    * Add the $(k+1)$ term: $\frac{k(k+1)(2k+7)}{6} + (k+1)(k+3)$.
+    * Factor out $(k+1)$: $(k+1) \left[ \frac{2k^2 + 7k + 6k + 18}{6} \right] = (k+1) \left[ \frac{2k^2 + 13k + 18}{6} \right]$.
+    * Factor the quadratic: $\frac{(k+1)(k+2)(2k+9)}{6}$.
+    * This matches the formula for $n=k+1$ because $2(k+1)+7 = 2k+9$.
+
+---
+
+### Proof of the Binomial Theorem (by Induction)
+**Identity:** $(x+y)^n = \sum_{k=0}^n \binom{n}{k} x^{n-k}y^k$.
+* **Base Case ($n=1$):** $(x+y)^1 = \binom{1}{0}x^1 y^0 + \binom{1}{1}x^0 y^1 = x+y$. True.
+* **Inductive Step:** Assume $(x+y)^k = \sum_{j=0}^k \binom{k}{j} x^{k-j}y^j$.
+    * Multiply both sides by $(x+y)$:
+    * $(x+y)^{k+1} = x \sum \binom{k}{j} x^{k-j}y^j + y \sum \binom{k}{j} x^{k-j}y^j$.
+    * Distribute: $\sum \binom{k}{j} x^{k+1-j}y^j + \sum \binom{k}{j} x^{k-j}y^{j+1}$.
+    * After shifting the index on the second sum and grouping terms with the same powers ($x^{k+1-j}y^j$), the coefficients become $\binom{k}{j} + \binom{k}{j-1}$.
+    * By **Pascal’s Rule**, $\binom{k}{j} + \binom{k}{j-1} = \binom{k+1}{j}$.
+* **Result:** This results exactly in the expansion for $(x+y)^{k+1}$.
+
+---

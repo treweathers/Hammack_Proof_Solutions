@@ -1,4 +1,6 @@
-# Discrete Math Study Guide: Chapter 2
+# Finals Prep
+
+## Discrete Math Study Guide: Chapter 2
 
 ## 1. Section 2.6: Truth Tables & Logical Equivalence
 
@@ -525,7 +527,7 @@ To master these, you just need to check three "pass/fail" tests:
 
 ---
 
-# Discrete Math Study Guide: Chapter 11
+## Discrete Math Study Guide: Chapter 11
 
 ## Section 11.2: Relations
 

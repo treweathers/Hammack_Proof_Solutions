@@ -178,3 +178,14 @@ Sometimes a relation is **not** an equivalence relation. If it fails even one te
 | **A fraction** ($\frac{x+1}{x-2}$) | Algebra (Cross-multiply) | This is a classic "isolate $x$" setup. |
 | **A piecewise/cases** (even/odd) | Pure Logic | You can't solve an equation for "evenness." |
 | **Ordered pairs** ($(x, y)$) | System of Equations | You'll solve for $x$ and $y$ separately (like Exercise 12.5.6). |
+
+# Chapter 14. Cardinality
+
+### Comparison Table for the Final
+
+| Set Comparison | Cardinality | Result | Key Proof |
+| :--- | :--- | :--- | :--- |
+| $\mathbb{N}$ vs. $\mathbb{Z}$ | $\aleph_0 = \aleph_0$ | **Same** | Zigzag Bijection |
+| $\mathbb{N}$ vs. $\mathbb{Q}$ | $\aleph_0 = \aleph_0$ | **Same** | Cantor's Interleaving (Snaking through fractions) |
+| $\mathbb{N}$ vs. $\mathbb{R}$ | $\aleph_0 < c$ | **Different** | Diagonal Argument |
+| $(0, 1)$ vs. $\mathbb{R}$ | $c = c$ | **Same** | Tangent Function |

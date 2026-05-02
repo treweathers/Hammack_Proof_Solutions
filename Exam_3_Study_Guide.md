@@ -170,7 +170,7 @@ Sometimes a relation is **not** an equivalence relation. If it fails even one te
 # Chapter 12. Functions
 
 
-### Function Solving Methods
+### Proof Methods
 
 | If the function looks like... | Use this method... | Why? |
 | :--- | :--- | :--- |

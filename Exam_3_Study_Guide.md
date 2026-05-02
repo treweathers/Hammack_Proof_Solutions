@@ -166,3 +166,11 @@ Sometimes a relation is **not** an equivalence relation. If it fails even one te
 * If you tried to make a "bin" for 5, who would be in it? Numbers smaller than 5.
 * But is 5 in its own bin? No ($5 < 5$ is false). 
 * **The logic breaks.** If you can't be in your own "case," it's not an equivalence relation!
+
+# Chapter 12. Functions
+Proof
+If the function looks like...,Use this method...,Why?
+A polynomial (x2+5),Algebra,You can add/subtract to isolate x.
+A fraction (x−2x+1​),Algebra (Cross-multiply),"This is a classic ""isolate x"" setup."
+A piecewise/cases (even/odd),Pure Logic,"You can't solve an equation for ""evenness."""
+"Ordered pairs ((x,y))",System of Equations,You'll solve for x and y separately (like Exercise 12.5.6).

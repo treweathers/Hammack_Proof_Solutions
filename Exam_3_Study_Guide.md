@@ -168,9 +168,13 @@ Sometimes a relation is **not** an equivalence relation. If it fails even one te
 * **The logic breaks.** If you can't be in your own "case," it's not an equivalence relation!
 
 # Chapter 12. Functions
-Proof
-If the function looks like...,Use this method...,Why?
-A polynomial (x2+5),Algebra,You can add/subtract to isolate x.
-A fraction (x−2x+1​),Algebra (Cross-multiply),"This is a classic ""isolate x"" setup."
-A piecewise/cases (even/odd),Pure Logic,"You can't solve an equation for ""evenness."""
-"Ordered pairs ((x,y))",System of Equations,You'll solve for x and y separately (like Exercise 12.5.6).
+
+
+### Function Solving Methods
+
+| If the function looks like... | Use this method... | Why? |
+| :--- | :--- | :--- |
+| **A polynomial** ($x^2 + 5$) | Algebra | You can add/subtract to isolate $x$. |
+| **A fraction** ($\frac{x+1}{x-2}$) | Algebra (Cross-multiply) | This is a classic "isolate $x$" setup. |
+| **A piecewise/cases** (even/odd) | Pure Logic | You can't solve an equation for "evenness." |
+| **Ordered pairs** ($(x, y)$) | System of Equations | You'll solve for $x$ and $y$ separately (like Exercise 12.5.6). |

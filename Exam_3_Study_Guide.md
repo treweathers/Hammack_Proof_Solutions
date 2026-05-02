@@ -189,3 +189,17 @@ Sometimes a relation is **not** an equivalence relation. If it fails even one te
 | $\mathbb{N}$ vs. $\mathbb{Q}$ | $\aleph_0 = \aleph_0$ | **Same** | Cantor's Interleaving (Snaking through fractions) |
 | $\mathbb{N}$ vs. $\mathbb{R}$ | $\aleph_0 < c$ | **Different** | Diagonal Argument |
 | $(0, 1)$ vs. $\mathbb{R}$ | $c = c$ | **Same** | Tangent Function |
+
+You’ve got it! **A bijection is the gold standard of proof.**
+
+If you can demonstrate a perfect one-to-one pairing between your set and the Natural numbers ($\mathbb{N}$), you have mathematically "linked" them. They are now the same size.
+
+### The "Cheat Sheet" for Proof Logic
+When the final asks you to prove the cardinality of a set $A$:
+
+* **To Prove it is Countable:** Find a **Bijection** $f: \mathbb{N} \to A$. 
+    * *Alternative:* Just show you can **list** the elements in a definitive order ($a_1, a_2, a_3, \dots$) where every element is eventually reached.
+* **To Prove it is Uncountable:** Use **Contradiction**. 
+    * Assume there *is* a bijection, then use Cantor’s Diagonal Argument to find a "Monster" element that is missing.
+
+

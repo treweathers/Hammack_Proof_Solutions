@@ -287,3 +287,152 @@ $\frac{k}{k+1} + \frac{1}{(k+1)(k+2)} = \frac{k(k+2) + 1}{(k+1)(k+2)} = \frac{k^
 ---
 
 # Set 3
+Haha, I promise it’s not a joke! It’s just "Math-ese." Problem #12 is essentially asking you to prove that if you take two pairs of numbers that have the same remainder, their sums will also have the same remainder. It's the "Addition Property" of congruences.
+
+Let's break that one—and the rest—down into plain English.
+
+---
+
+### **(1) Section 1: Truth Tables (2.6.9)**
+**Problem:** Show $(P \iff Q) \equiv (P \wedge Q) \vee (\sim P \wedge \sim Q)$ using a truth table.
+
+| $P$ | $Q$ | $P \iff Q$ | $P \wedge Q$ | $\sim P \wedge \sim Q$ | $(P \wedge Q) \vee (\sim P \wedge \sim Q)$ |
+| :--- | :--- | :--- | :--- | :--- | :--- |
+| T | T | **T** | T | F | **T** |
+| T | F | **F** | F | F | **F** |
+| F | T | **F** | F | F | **F** |
+| F | F | **T** | F | T | **T** |
+
+**Conclusion:** The columns for $P \iff Q$ and the complex OR statement match exactly. They are equivalent.
+
+---
+
+### **(2) Section 2: Negating Statements (2.10.5)**
+**Problem:** Negate: $\exists x \in \mathbb{R}, \forall n \in \mathbb{N}, x^n > 0$.
+**Logic:** Flip the symbols and negate the final inequality.
+**Answer:** $\forall x \in \mathbb{R}, \exists n \in \mathbb{N}, x^n \le 0$.
+
+---
+
+### **(3) Section 3: Counting Problems (3.5.19)**
+**Problem:** How many 5-card hands contain at least one King?
+**Strategy:** "Total hands" minus "Hands with ZERO Kings."
+1. **Total:** $\binom{52}{5}$.
+2. **No Kings:** There are 48 cards that aren't Kings. So, $\binom{48}{5}$.
+**Answer:** $\binom{52}{5} - \binom{48}{5} = 2,598,960 - 1,712,304 = 886,656$.
+
+---
+
+### **(4) Section 4: Pascal’s Rule**
+**Problem:** Find $\binom{5}{3}$ given $\binom{4}{3} = 4$ and $\binom{4}{2} = 6$.
+**Logic:** Pascal's Rule says a cell in the triangle is the sum of the two cells directly above it.
+**Calculation:** $\binom{5}{3} = \binom{4}{3} + \binom{4}{2} = 4 + 6 = 10$.
+
+---
+
+### **(5) Section 5: Direct/Contrapositive (5.27)**
+**Problem:** If $a \equiv b \pmod n$, then $a^2 \equiv b^2 \pmod n$.
+**Proof:** $a \equiv b \pmod n$ means $n \mid (a - b)$, so $a - b = nk$ for some integer $k$.
+We want to show $n \mid (a^2 - b^2)$.
+Factoring: $a^2 - b^2 = (a - b)(a + b)$.
+Substitute $nk$ for $(a-b)$: $a^2 - b^2 = (nk)(a + b) = n[k(a + b)]$.
+**Conclusion:** Since $a^2 - b^2$ is a multiple of $n$, then $a^2 \equiv b^2 \pmod n$.
+
+---
+
+### **(6) Section 6: Proof by Contradiction (6.17)**
+**Problem:** If $n^2$ is even, then $n$ is even.
+**Assume False:** Suppose $n^2$ is even and $n$ is odd.
+**Proof:** If $n$ is odd, $n = 2k + 1$.
+$n^2 = (2k + 1)^2 = 4k^2 + 4k + 1 = 2(2k^2 + 2k) + 1$.
+This means $n^2$ is odd.
+**Contradiction:** We assumed $n^2$ was even, but we found it must be odd.
+**Conclusion:** $n$ must be even.
+
+---
+
+### **(7) Section 7: IFF Statements (7.11)**
+**Problem:** $xy$ is odd iff $x$ is odd and $y$ is odd.
+**($\implies$):** Assume $xy$ is odd. By contrapositive, if $x$ or $y$ were even, the product would be even ($2k \cdot y = 2(ky)$). Thus, both must be odd.
+**($\impliedby$):** Assume $x = 2k+1$ and $y = 2m+1$.
+$xy = (2k+1)(2m+1) = 4km + 2k + 2m + 1 = 2(2km + k + m) + 1$.
+**Conclusion:** $xy$ is odd.
+
+---
+
+### **(8) Section 8: Proofs Involving Sets (8.1)**
+**Problem:** $\{x \in \mathbb{Z} : 8 \mid x\} \subseteq \{x \in \mathbb{Z} : 4 \mid x\}$.
+**Proof:** Let $x \in \{8k\}$. Then $x = 8k$ for some integer $k$.
+Rewrite $8k$ as $4(2k)$. Since $2k$ is an integer, $x$ is a multiple of $4$.
+**Conclusion:** Every element of the first set is in the second set.
+
+---
+
+### **(9) Section 9: Disproof / Counterexamples (9.9)**
+**Problem:** Disprove: $A \cap (B \cup C) = (A \cap B) \cup C$.
+**Counterexample:** Let $A=\{1\}, B=\{1\}, C=\{2\}$.
+**LHS:** $A \cap \{1, 2\} = \{1\}$.
+**RHS:** $\{1\} \cup \{2\} = \{1, 2\}$.
+**Conclusion:** $\{1\} \neq \{1, 2\}$. Disproven.
+
+---
+
+### **(10) Section 10: Induction**
+**Problem:** $n < 2^n$ for all $n \in \mathbb{N}$.
+**Base Case ($n=1$):** $1 < 2^1$ is true.
+**Step:** Assume $k < 2^k$. Show $k+1 < 2^{k+1}$.
+$2^{k+1} = 2 \cdot 2^k = 2^k + 2^k$.
+Since $k < 2^k$ (hypothesis) and $1 \le 2^k$ (for all $n \ge 1$), then $k + 1 < 2^k + 2^k$.
+**Conclusion:** $k+1 < 2^{k+1}$.
+
+---
+
+### **(11) Section 11: Relations (11.2.9)**
+**Problem:** $xRy$ if $x \le y$ on $\mathbb{Z}$.
+**Symmetric?** No. $1 \le 2$ but $2 \not\le 1$.
+**Antisymmetric?** Yes. If $x \le y$ and $y \le x$, then $x = y$.
+
+---
+
+### **(12) Section 12: Equivalence Relations (11.3.11)**
+**Problem:** If $a \equiv b \pmod n$ and $c \equiv d \pmod n$, prove $(a+c) \equiv (b+d) \pmod n$.
+**Proof:**
+1. $a - b = nk_1$
+2. $c - d = nk_2$
+Add the equations: $(a - b) + (c - d) = nk_1 + nk_2$.
+Rearrange: $(a + c) - (b + d) = n(k_1 + k_2)$.
+**Conclusion:** Since the difference is a multiple of $n$, the sums are congruent.
+
+---
+
+### **(13) Section 13: Injective (12.2.11)**
+**Problem:** If $f$ and $g$ are injective, show $g \circ f$ is injective.
+**Proof:** Assume $g(f(x_1)) = g(f(x_2))$.
+Since $g$ is injective, $f(x_1) = f(x_2)$.
+Since $f$ is injective, $x_1 = x_2$.
+**Conclusion:** $g \circ f$ is injective.
+
+---
+
+### **(14) Section 14: Inverses (12.5.9)**
+**Problem:** Find the inverse of $f(x) = \frac{2x}{x+1}$.
+**Step:** $y = \frac{2x}{x+1} \implies y(x+1) = 2x \implies yx + y = 2x$.
+$y = 2x - yx \implies y = x(2 - y) \implies x = \frac{y}{2-y}$.
+**Result:** $f^{-1}(x) = \frac{x}{2-x}$.
+
+---
+
+### **(15) Section 15: Cardinality**
+**Problem:** Prove $|\mathbb{N} \times \{0, 1\}| = |\mathbb{N}|$.
+**Bijection:** Use the "Odd/Even" trick from your guide!
+$f(n, 0) = 2n$ (maps to evens).
+$f(n, 1) = 2n - 1$ (maps to odds).
+**Result:** Every natural number is either even or odd, so this covers all of $\mathbb{N}$ perfectly.
+
+---
+
+### **(16) Section 16: Countable Sets**
+**Problem:** The set of all finite subsets of $\mathbb{N}$ is countable.
+**Proof (Sketch):** You can list subsets by their "maximum element" and their "sum." For any sum $S$, there are only finitely many subsets of $\mathbb{N}$ that add up to $S$. Since you can list finite groups of finite sets, the whole thing is countable.
+
+---

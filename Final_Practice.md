@@ -1,7 +1,4 @@
 # Set 1
-That’s the spirit! Let's get these graded. Below are the step-by-step solutions for the 16 problems, using the exact logic and "Conclusion" phrasing your professor provided in the guide.
-
----
 
 ### **(1) Section 1: Truth Tables**
 **Problem:** Use a truth table to determine if $(P \implies Q) \equiv (\sim Q \implies \sim P)$.
@@ -145,9 +142,6 @@ Substitute $m$ into (1): $x = (y-x) + n \implies n = 2x - y$.
 ---
 
 # Set 2
-No stress! Getting stuck on the "B-Side" problems is actually good—it means you're hitting the edge cases now instead of tomorrow during the exam. Here are the full solutions for the second set.
-
----
 
 ### **(1) Section 1: Truth Tables**
 **Problem:** Use a truth table to determine if $[P \wedge (P \implies Q)] \implies Q$ is a tautology.
@@ -287,11 +281,6 @@ $\frac{k}{k+1} + \frac{1}{(k+1)(k+2)} = \frac{k(k+2) + 1}{(k+1)(k+2)} = \frac{k^
 ---
 
 # Set 3
-Haha, I promise it’s not a joke! It’s just "Math-ese." Problem #12 is essentially asking you to prove that if you take two pairs of numbers that have the same remainder, their sums will also have the same remainder. It's the "Addition Property" of congruences.
-
-Let's break that one—and the rest—down into plain English.
-
----
 
 ### **(1) Section 1: Truth Tables (2.6.9)**
 **Problem:** Show $(P \iff Q) \equiv (P \wedge Q) \vee (\sim P \wedge \sim Q)$ using a truth table.
@@ -436,3 +425,102 @@ $f(n, 1) = 2n - 1$ (maps to odds).
 **Proof (Sketch):** You can list subsets by their "maximum element" and their "sum." For any sum $S$, there are only finitely many subsets of $\mathbb{N}$ that add up to $S$. Since you can list finite groups of finite sets, the whole thing is countable.
 
 ---
+
+# Section 4
+
+### **(1) Section 3: Counting Problems (3.4.9)**
+**Problem:** How many ways can 8 people be seated at a round table? (Note: Rotating the table doesn't count as a new seating).
+**Logic:** In a line, there are $8!$ ways. However, at a round table, each arrangement is identical to 7 others (rotating each person one seat over).
+**Solution:** To fix the "rotation" problem, we fix one person in a seat and arrange the remaining $(n-1)$ people around them.
+**Result:** $(8 - 1)! = 7! = 5,040$.
+
+---
+
+### **(2) Section 5: Direct/Contrapositive (5.21)**
+**Problem:** Let $a, b \in \mathbb{Z}$. Prove: If $a \equiv b \pmod n$, then $a-c \equiv b-c \pmod n$.
+**Proof:**
+1. Assume $a \equiv b \pmod n$. By definition, $n \mid (a - b)$.
+2. This means $a - b = nk$ for some integer $k$.
+3. We want to show $n \mid ((a - c) - (b - c))$.
+4. Simplify the target: $(a - c) - (b - c) = a - c - b + c = a - b$.
+5. Since we know $a - b = nk$, then $(a - c) - (b - c) = nk$.
+**Conclusion:** Since the difference is a multiple of $n$, then $a-c \equiv b-c \pmod n$.
+
+---
+
+### **(3) Section 6: Proof by Contradiction (6.7)**
+**Problem:** Prove there is no integer $n$ such that $n^2 \equiv 2 \pmod 4$.
+**Assume False:** Suppose there exists an $n \in \mathbb{Z}$ such that $n^2 = 4k + 2$.
+**Case 1 (n is even):** Let $n = 2m$. Then $n^2 = (2m)^2 = 4m^2$.
+Setting $4m^2 = 4k + 2 \implies 4(m^2 - k) = 2 \implies 2(m^2 - k) = 1$.
+This implies 1 is even, a **contradiction**.
+**Case 2 (n is odd):** Let $n = 2m+1$. Then $n^2 = 4m^2 + 4m + 1 = 4(m^2 + m) + 1$.
+This leaves a remainder of 1, not 2. **Contradiction**.
+**Conclusion:** No such integer $n$ exists.
+
+---
+
+### **(4) Section 7: IFF Statements (7.5)**
+**Problem:** Prove: $a^2 - 5a + 6$ is even for all $a \in \mathbb{Z}$.
+**Method:** Case Analysis (Direct Proof).
+**Case 1 (a is even):** Let $a = 2k$.
+$(2k)^2 - 5(2k) + 6 = 4k^2 - 10k + 6 = 2(2k^2 - 5k + 3)$. This is even.
+**Case 2 (a is odd):** Let $a = 2k + 1$.
+$(2k+1)^2 - 5(2k+1) + 6 = (4k^2 + 4k + 1) - (10k + 5) + 6 = 4k^2 - 6k + 2 = 2(2k^2 - 3k + 1)$. This is even.
+**Conclusion:** In both possible cases, the result is even.
+
+---
+
+### **(5) Section 11: Relations (11.2.5)**
+**Problem:** Let $R = \{(x, y) \in \mathbb{R}^2 : x^2 + y^2 = 1\}$. Is $R$ reflexive? Is it symmetric?
+**Reflexive?** No. For $R$ to be reflexive, $xRx$ must be true for all $x$. But $2^2 + 2^2 = 8 \neq 1$.
+**Symmetric?** Yes. If $x^2 + y^2 = 1$, then $y^2 + x^2 = 1$ (by commutativity of addition). Thus if $xRy$, then $yRx$.
+
+---
+
+### **(6) Section 12: Equivalence Classes (11.3.5)**
+**Problem:** Let $aRb$ iff $a \equiv b \pmod 5$. List three elements in the equivalence class $[2]$.
+**Logic:** $[2]$ contains all integers $x$ such that $x \equiv 2 \pmod 5$, meaning $x = 5k + 2$.
+**Elements:**
+1. Let $k = 0 \implies x = 2$.
+2. Let $k = 1 \implies x = 7$.
+3. Let $k = -1 \implies x = -3$.
+**Answer:** $\{ \dots, -3, 2, 7, \dots \}$.
+
+---
+
+### **(7) Section 13: Injective/Surjective (12.2.5)**
+**Problem:** Let $f: \mathbb{R} \to \mathbb{R}$ be $f(x) = e^x$. Is $f$ injective? Is it surjective?
+**Injective?** Yes. If $e^{x_1} = e^{x_2}$, taking the natural log of both sides gives $x_1 = x_2$.
+**Surjective?** No. The range of $e^x$ is $(0, \infty)$. There is no $x$ such that $e^x = -1$ or $e^x = 0$.
+
+---
+
+### **(8) Section 14: Inverse Functions (12.5.7)**
+**Problem:** Prove that if $f: A \to B$ is a bijection, then $f^{-1}$ is also a bijection.
+**Proof Sketch:**
+1. Since $f$ is a bijection, every $b \in B$ has exactly one $a \in A$ such that $f(a) = b$. This defines the function $f^{-1}(b) = a$.
+2. **Injective:** If $f^{-1}(b_1) = f^{-1}(b_2) = a$, then $f(a) = b_1$ and $f(a) = b_2$. Since $f$ is a function, $b_1 = b_2$.
+3. **Surjective:** For any $a \in A$, there is a $b \in B$ (namely $b = f(a)$) such that $f^{-1}(b) = a$.
+**Conclusion:** $f^{-1}$ is both injective and surjective.
+
+---
+
+### **(9) Section 16: Countable Sets (14.2.3 variant)**
+**Problem:** Prove the set of all polynomials with integer coefficients is countable.
+**Proof (Sketch):** Every polynomial can be defined by a finite list of integer coefficients $(a_0, a_1, \dots, a_n)$.
+1. We know $\mathbb{Z}$ is countable.
+2. We know the Cartesian product of a finite number of countable sets ($\mathbb{Z} \times \mathbb{Z} \times \dots$) is countable.
+3. The set of all polynomials is the union of all polynomials of degree 1, degree 2, degree 3, etc.
+4. A countable union of countable sets is countable.
+**Conclusion:** The set of polynomials is countable.
+
+---
+
+### **The "Deep Dive" Check-in**
+You’ve officially covered every section! Before you close the books, let's look at the "big three" logic jumps one more time:
+
+* **Modular Proofs:** Always write out $a - b = nk$ immediately. It turns a "logic" problem into a "basic algebra" problem.
+* **Induction:** Always write down what your "Target" looks like (the formula for $n = k+1$). It helps you see how to manipulate your assumption.
+* **Injective/Surjective:** If you can't solve for $x$ (for surjective) or the math gives you two answers like $\pm$ (for injective), it’s probably a "No."
+
